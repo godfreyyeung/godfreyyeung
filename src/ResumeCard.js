@@ -18,7 +18,10 @@ const CardHeader = (props) => {
                 container
                 item
             >   
-                <Grid item>
+                <Grid
+                    item
+                    xs={1}
+                >
                     <div
                         style={
                             {
@@ -31,13 +34,14 @@ const CardHeader = (props) => {
                     </div>
                 </Grid>
                 <Grid
+                    container
                     item
+                    xs={11}
                 >
                     <Grid
                         container
                         item
                         justify="space-between"
-                        alignItems="baseline"
                     >
                         <Grid item>
                             <Typography variant="h6">
@@ -48,7 +52,9 @@ const CardHeader = (props) => {
                             <Typography variant="subtitle2"> {props.info.startDate} - {props.info.endDate} </Typography>
                         </Grid>
                     </Grid>
-                    <Grid>
+                    <Grid
+                        item
+                    >
                         <Typography variant="overline">
                             {props.info.role}
                         </Typography>
