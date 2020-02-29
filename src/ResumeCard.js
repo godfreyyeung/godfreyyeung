@@ -25,7 +25,7 @@ const CardHeader = (props) => {
                                 width: '50px',
                                 height: '75px',
                                 'background-color': 'silver',
-                                'margin-right': '10px'
+                                'margin': '0 10px 10px 0'
                             }
                         }>
                     </div>
@@ -73,19 +73,44 @@ class ResumeCard extends React.Component {
     cardContent = (showBack) => {
         if (showBack) {
             return (
-                <div>
-                    <div>
+                <Grid
+                    container
+                    item
+                >
+                    <Grid
+                        item
+                        xs={1}
+                    >
+                        <div
+                            style={
+                                {
+                                    width: '50px',
+                                    height: '50px',
+                                    'background-color': 'silver',
+                                }
+                            }>
+                        </div>
+                    </Grid>
+                    <Grid
+                        item
+                        xs={11}
+                    >
+                        <Typography variant="h6">
+                            Contributions
+                        </Typography>
+                        <div>
+                            <ul>
+                                {this.props.info.achievements.map(achievement => ( <li>{achievement}</li> )) }
+                            </ul>
+                        </div>
+                        <Typography variant="h6">
+                            Notable Projects
+                        </Typography>
                         <ul>
-                            {this.props.info.achievements.map(achievement => ( <li>{achievement}</li> )) }
+                            {this.props.info.projects.map(achievement => ( <li>{achievement}</li> )) }
                         </ul>
-                    </div>
-                    <Typography variant="h6">
-                        Projects
-                    </Typography>
-                    <ul>
-                        {this.props.info.projects.map(achievement => ( <li>{achievement}</li> )) }
-                    </ul>
-                </div>
+                    </Grid>
+                </Grid>
             )
         }
     }
