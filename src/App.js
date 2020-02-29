@@ -157,7 +157,23 @@ function App() {
             }
           }
         >
+        <Typography variant="h5">
+          Skills
+        </Typography>
+        <p>
+          <Typography variant="overline">
+            Languages: JavaScript, Python, HTML, (S)CSS, C/C++ <br />
+            Frameworks: EmberJS, NestJS, React, AngularJS, VueJS, Rails <br />
+            Visualization: D3, Leaflet, ArcGIS JS API, Mapbox, Carto, Google Maps API <br />
+            Tools: Git, Docker, Heroku, Jupyter Notebooks
+          </Typography>
+        </p>
+          <Typography variant="h5">
+            Experience
+          </Typography>
+         <div>
           {experiences.map((experience) => (<ResumeCard info={experience} />))}
+         </div> 
         </Grid>
       </Grid>
   );
