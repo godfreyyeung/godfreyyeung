@@ -19,24 +19,33 @@ const CardHeader = (props) => {
                 item
             >   
                 <Grid
+                    container
                     item
-                    xs={1}
+                    xs={2}
+                    lg={1}
+                    justify="center"
+                    alignItems="center"
                 >
-                    <div
-                        style={
-                            {
-                                width: '50px',
-                                height: '75px',
-                                'background-color': 'silver',
-                                'margin': '0 10px 10px 0'
+                    <Grid
+                        item
+                    >
+                        <img
+                            src={props.info.logoUrl}
+                            alt={"Logo of " + props.info.company}
+                            style={
+                                {
+                                    maxWidth: '50px',
+                                    'margin': '0 10px 10px 0'
+                                }
                             }
-                        }>
-                    </div>
+                        />
+                    </Grid>
                 </Grid>
                 <Grid
                     container
                     item
-                    xs={11}
+                    xs={10}
+                    lg={11}
                 >
                     <Grid
                         container
@@ -65,6 +74,26 @@ const CardHeader = (props) => {
     )
 }
 
+const ProjectSection = (props) => {
+    return (
+        <Grid
+            item
+            xs={12}
+        >
+            <Typography variant="overline">
+                {props.project.title}
+            </Typography>
+            <p>
+                <Typography
+                    variant="overline"
+                >
+                    {props.project.description}
+                </Typography>
+            </p>
+        </Grid>
+    )
+}
+
 class ResumeCard extends React.Component {
     state = {
         showBack: false,
@@ -84,41 +113,53 @@ class ResumeCard extends React.Component {
                     item
                 >
                     <Grid
+                        container
                         item
-                        xs={1}
+                        xs={2}
+                        lg={1}
+                        justify="center"
                     >
-                        <div
-                            style={
-                                {
-                                    width: '50px',
-                                    height: '50px',
-                                    'background-color': 'silver',
-                                }
-                            }>
-                        </div>
+                        <Grid
+                            item
+                        >
+                            <div
+                                style={
+                                    {
+                                        width: '50px',
+                                        height: '50px',
+                                        backgroundColor: 'silver',
+                                    }
+                                }>
+                            </div>
+                        </Grid>
                     </Grid>
                     <Grid
+                        container
                         item
-                        xs={11}
+                        xs={10}
+                        lg={11}
                     >
-                        <Typography variant="h6">
-                            Contributions
-                        </Typography>
-                        <div>
-                            <ul>
-                                {this.props.info.achievements.map(achievement => ( <li>{achievement}</li> )) }
-                            </ul>
-                        </div>
+                        <p>
+                            <Typography variant="subtitle1">
+                                {this.props.info.description}
+                            </Typography>
+                        </p>
                         <Typography variant="h6">
                             Notable Projects
                         </Typography>
-                        <ul>
-                            {this.props.info.projects.map(achievement => ( <li>{achievement}</li> )) }
-                        </ul>
+                        {this.props.info.projects.map(project => ( <ProjectSection project={project} />)) }
                     </Grid>
                 </Grid>
             )
         }
+    }
+
+    cardStyles = () => {
+        let cardStyles = "resumeCard";
+        if (this.state.showBack) {
+            cardStyles += " hoveredCard";
+        }
+        return cardStyles;
     }
 
     render() {
@@ -130,12 +171,13 @@ class ResumeCard extends React.Component {
                     style={
                         {
                             padding: '15px',
-                            'min-height': '50px',
-                            'border-radius': '0',
-                            margin: '0 0 5px 0'
+                            minHeight: '50px',
+                            borderRadius: '0',
+                            margin: '0 0 5px 0',
+                            boxShadow: 'none',
                         }
                     }
-                    className="not-hovered-resume-card"
+                    className={this.cardStyles()}
                 >
                     <CardHeader
                         info={this.props.info}

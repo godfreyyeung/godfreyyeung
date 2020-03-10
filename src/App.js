@@ -25,18 +25,26 @@ function App() {
       state: "New York",
       startDate: "May 2019",
       endDate: "Present",
-      achievements: [
-        "Collaborated in a close-knit, agile team, engaging in pair programming, code reviews, and teaching",
-        "Built complex, model-driven end-to-end features using Ember, React, Nest, Express, and Ruby on Rails",
-        "Wrote extensive acceptance, integration and unit tests with endpoint stubbing and database mocking",
-        "Pioneered an end-to-end file-upload feature using Ember, NestJS and the Microsoft Dynamics Web API",
-      ],
-      description: "",
+      description: (
+        <span>
+          I'm part of <a href="https://labs.planning.nyc.gov">Planning Labs</a>, a team practicing
+          open-source, modern web development to deliver a large suite of applications to
+          City Planning.
+        </span>
+      ),
       projects: [
-        "Zoning Application Portal",
-        "City Environmental Quality Review",
+        {
+          title: "Zoning Application Portal",
+          description: "A portal",
+          photoUrl: "",
+        },
+        {
+          title: "City Environmental Quality Review",
+          description: "",
+          photoUrl: "",
+        }
       ],
-      logoUrl: "",
+      logoUrl: "dcp-logo.png",
     },
     {
       role: "Geospatial Developer",
@@ -51,11 +59,23 @@ function App() {
       ],
       description: "",
       projects: [
-        "Economic Value Atlas",
-        "Regional Illegal Dumping",
-        "Trail Counts",
+        {
+          title: "Economic Value Atlas",
+          description: "A project in collaboration with Brookings",
+          photoUrl: ""
+        },
+        {
+          title: "Regional Illegal Dumping",
+          description: "",
+          photoUrl: "",
+        },
+        {
+          title: "Trail Counts",
+          description: "",
+          photoUrl: "",
+        },
       ],
-      logoUrl: "",
+      logoUrl: "metro-logo.png",
     },
     {
       role: "IT GIS Intern",
@@ -69,11 +89,10 @@ function App() {
         "",
         "",
         "",
-        "",
       ],
       description: "",
       projects: [],
-      logoUrl: "",
+      logoUrl: "salem-logo.png",
     },
     {
       role: "Software Engineering Intern",
@@ -91,7 +110,7 @@ function App() {
       ],
       description: "",
       projects: [],
-      logoUrl: "",
+      logoUrl: "placemeter-logo.png",
     },
   ]
 
@@ -157,23 +176,33 @@ function App() {
             }
           }
         >
-        <Typography variant="h5">
-          Skills
-        </Typography>
-        <p>
-          <Typography variant="overline">
+          <p>
+            <Typography variant="h5">
+              Hi! I'm a sustainable urban planning enthusiast and a software engineer.
+              For the past four years I've had the opportunity to work in local
+              government, building software used by both planners and citizens to 
+              improve quality of life in their region.
+            </Typography>
+          </p>
+          <p>
+            <Typography variant="h5">
+              Past and Present Work
+            </Typography>
+          </p>
+          <div>
+            {experiences.map((experience) => (<ResumeCard info={experience} />))}
+          </div>
+          <p>
+            <Typography variant="h5">
+              Skills
+            </Typography>
+          </p>
+          <Typography variant="body">
             Languages: JavaScript, Python, HTML, (S)CSS, C/C++ <br />
             Frameworks: EmberJS, NestJS, React, AngularJS, VueJS, Rails <br />
             Visualization: D3, Leaflet, ArcGIS JS API, Mapbox, Carto, Google Maps API <br />
             Tools: Git, Docker, Heroku, Jupyter Notebooks
           </Typography>
-        </p>
-          <Typography variant="h5">
-            Experience
-          </Typography>
-         <div>
-          {experiences.map((experience) => (<ResumeCard info={experience} />))}
-         </div> 
         </Grid>
       </Grid>
   );
