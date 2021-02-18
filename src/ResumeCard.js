@@ -54,7 +54,7 @@ const CardHeader = (props) => {
                     >
                         <Grid item>
                             <Typography variant="h6">
-                                {props.info.company} <Typography variant="caption">({props.info.city}, {props.info.state})</Typography>
+                                {props.info.company}
                             </Typography>
                         </Grid>
                         <Grid item>
@@ -62,11 +62,18 @@ const CardHeader = (props) => {
                         </Grid>
                     </Grid>
                     <Grid
+                        container
                         item
+                        justify="space-between"
                     >
-                        <Typography variant="overline">
-                            {props.info.role}
-                        </Typography>
+                        <Grid item>
+                            <Typography variant="overline">
+                                {props.info.role}
+                            </Typography>
+                        </Grid>
+                        <Grid item>
+                            <Typography variant="caption">{props.info.city}, {props.info.state}</Typography>
+                        </Grid>
                     </Grid>
                 </Grid>
             </Grid>
@@ -80,13 +87,11 @@ const ProjectSection = (props) => {
             item
             xs={12}
         >
-            <Typography variant="overline">
-                {props.project.title}
-            </Typography>
             <p>
-                <Typography
-                    variant="overline"
-                >
+                <Typography variant="overline">
+                    {props.project.title}
+                </Typography>
+                <Typography>
                     {props.project.description}
                 </Typography>
             </p>
@@ -140,11 +145,11 @@ class ResumeCard extends React.Component {
                         lg={11}
                     >
                         <p>
-                            <Typography variant="subtitle1">
+                            <Typography>
                                 {this.props.info.description}
                             </Typography>
                         </p>
-                        <Typography variant="h6">
+                        <Typography variant="subtitle2">
                             Notable Projects
                         </Typography>
                         {this.props.info.projects.map(project => ( <ProjectSection project={project} />)) }

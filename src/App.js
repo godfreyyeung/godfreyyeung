@@ -27,7 +27,7 @@ function App() {
       endDate: "Present",
       description: (
         <span>
-          I'm part of <a href="https://labs.planning.nyc.gov">Planning Labs</a>, a team practicing
+          I am part of <a href="https://labs.planning.nyc.gov">Labs</a>, a division practicing
           open-source, modern web development to deliver a large suite of applications to
           City Planning.
         </span>
@@ -35,12 +35,19 @@ function App() {
       projects: [
         {
           title: "Zoning Application Portal",
-          description: "A portal",
+          description: (<div>
+                A tool for New York's borough boards, borough presidents, and community boards to submit hearings
+                and recommendations.
+             </div>),
           photoUrl: "",
         },
         {
           title: "City Environmental Quality Review",
-          description: "",
+          description: (
+            <div>
+              A tool for planners and consultants to review environmental impacts of proposed developments across the city.
+            </div>
+          ),
           photoUrl: "",
         }
       ],
@@ -57,7 +64,12 @@ function App() {
       achievements: [
         "",
       ],
-      description: "",
+      description: (
+        <span>
+          Part of the Research Center, I delivered a number of progressive, spatially enabled web applications
+          to different departments like Parks &amp; Nature, Planning, and Regional Illegal Dumping. 
+        </span>
+      ),
       projects: [
         {
           title: "Economic Value Atlas",
@@ -192,17 +204,6 @@ function App() {
           <div>
             {experiences.map((experience) => (<ResumeCard info={experience} />))}
           </div>
-          <p>
-            <Typography variant="h5">
-              Skills
-            </Typography>
-          </p>
-          <Typography variant="body">
-            Languages: JavaScript, Python, HTML, (S)CSS, C/C++ <br />
-            Frameworks: EmberJS, NestJS, React, AngularJS, VueJS, Rails <br />
-            Visualization: D3, Leaflet, ArcGIS JS API, Mapbox, Carto, Google Maps API <br />
-            Tools: Git, Docker, Heroku, Jupyter Notebooks
-          </Typography>
         </Grid>
       </Grid>
   );
