@@ -174,6 +174,26 @@ function App() {
                 </Link>
               </Typography>
             </Grid>
+
+            <Grid item>
+              <p>
+                <Typography
+                  variant="h5"
+                  color="textSecondary"
+                  align="center"
+                  style={
+                    {
+                      padding: '15px',
+                    }
+                  }
+                >
+                  Hello! I'm a sustainable urban planning enthusiast and a software engineer.
+                  For the past four years I've had the opportunity to work in local
+                  government, building software used by both planners and citizens to 
+                  improve quality of life in their region.
+                </Typography>
+              </p>
+            </Grid>
         </Grid>
         <Grid
           item
@@ -188,14 +208,6 @@ function App() {
             }
           }
         >
-          <p>
-            <Typography variant="h5">
-              Hi! I'm a sustainable urban planning enthusiast and a software engineer.
-              For the past four years I've had the opportunity to work in local
-              government, building software used by both planners and citizens to 
-              improve quality of life in their region.
-            </Typography>
-          </p>
           <p>
             <Typography variant="h5">
               Past and Present Work
