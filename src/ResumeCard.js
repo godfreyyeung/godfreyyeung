@@ -117,43 +117,20 @@ class ResumeCard extends React.Component {
                     container
                     item
                 >
-                    <Grid
-                        container
-                        item
-                        xs={2}
-                        lg={1}
-                        justify="center"
-                    >
-                        <Grid
-                            item
-                        >
-                            <div
-                                style={
-                                    {
-                                        width: '50px',
-                                        height: '50px',
-                                        backgroundColor: 'silver',
-                                    }
-                                }>
-                            </div>
-                        </Grid>
-                    </Grid>
-                    <Grid
-                        container
-                        item
-                        xs={10}
-                        lg={11}
-                    >
-                        <p>
-                            <Typography>
-                                {this.props.info.description}
-                            </Typography>
-                        </p>
-                        <Typography variant="subtitle2">
-                            Notable Projects
+                <Grid
+                    container
+                    item
+                >
+                    <p>
+                        <Typography>
+                            {this.props.info.description}
                         </Typography>
-                        {this.props.info.projects.map(project => ( <ProjectSection project={project} />)) }
-                    </Grid>
+                    </p>
+                    <Typography variant="subtitle2">
+                        Notable Projects
+                    </Typography>
+                    {this.props.info.projects.map(project => ( <ProjectSection project={project} />)) }
+                </Grid>
                 </Grid>
             )
         }
