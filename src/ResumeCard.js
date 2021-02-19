@@ -157,6 +157,7 @@ class ResumeCard extends React.Component {
                             borderRadius: '0',
                             margin: '0 0 5px 0',
                             boxShadow: 'none',
+                            backgroundColor: "rgb(253,253,253)",
                         }
                     }
                     className={this.cardStyles()}

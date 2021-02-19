@@ -131,6 +131,9 @@ function App() {
         container
         className="root"
         justify="space-between"
+        style={{
+          backgroundColor: "rgb(253,253,253)",
+        }}
       >
         <Grid
           container
