@@ -36,26 +36,27 @@ function App() {
         {
           title: "Applicant Portal",
           description: (
-            <div>
+            <span>
               The "21st century" tool for submitting land use application to City Planning.
-            </div>
+            </span>
           ),
           photoUrl: "",
         },
         {
           title: "Land Use Participation Portal",
-          description: (<div>
+          description: (
+              <span>
                 A tool for New York's borough boards, borough presidents, and community boards to submit hearings
                 and recommendations for land use applications as a part of the Uniform Land Use Review Procedure (ULURP).
-             </div>),
+             </span>),
           photoUrl: "",
         },
         {
           title: "City Environmental Quality Review",
           description: (
-            <div>
+            <span>
               A tool for planners and consultants to review environmental impacts of proposed developments across the city.
-            </div>
+            </span>
           ),
           photoUrl: "",
         }
@@ -83,29 +84,29 @@ function App() {
         {
           title: "Economic Value Atlas",
           description: (
-            <div>
+            <span>
               A tool for exploring economic, demographic and infrastructure indicator data through dynamic maps and D3 graphs.
               Developed in collaboration with the Brookings Institute and Metro's Planning division.
-            </div>
+            </span>
           ),
           photoUrl: ""
         },
         {
           title: "Regional Illegal Dumping",
           description: (
-            <div>
+            <span>
               A mobile-friendly, flexbox application where Metro citizens can report illegally dumped garbage. A mapping and geocoding component helps users
               report the illegal dumping location, or determine if it was already reported by someone else.
-            </div>
+            </span>
           ),
           photoUrl: "",
         },
         {
           title: "Trail Counts",
           description: (
-            <div>
+            <span>
               I led development for a pair of mobile-friendly tools, one for volunteers and one for administrators, for counting usage types (pedestrian, cyclists, scooter, etc) at trails around the region.
-            </div>
+            </span>
           ),
           photoUrl: "",
         },
@@ -202,7 +203,6 @@ function App() {
             </Grid>
 
             <Grid item>
-              <p>
                 <Typography
                   variant="h5"
                   color="textSecondary"
@@ -218,7 +218,6 @@ function App() {
                   government, building software used by both planners and citizens to 
                   improve quality of life in their region.
                 </Typography>
-              </p>
             </Grid>
         </Grid>
         <Grid
@@ -234,13 +233,11 @@ function App() {
             }
           }
         >
-          <p>
-            <Typography variant="h5">
-              Past and Present Work
-            </Typography>
-          </p>
+          <Typography variant="h5">
+            Past and Present Work
+          </Typography>
           <div>
-            {experiences.map((experience) => (<ResumeCard info={experience} />))}
+            {experiences.map((experience, idx) => (<ResumeCard info={experience} key={idx} />))}
           </div>
         </Grid>
       </Grid>

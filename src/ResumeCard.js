@@ -53,7 +53,7 @@ const CardHeader = (props) => {
                         justify="space-between"
                     >
                         <Grid item>
-                            <Typography variant="h6">
+                            <Typography variant="h5">
                                 {props.info.company}
                             </Typography>
                         </Grid>
@@ -86,17 +86,34 @@ const ProjectSection = (props) => {
         <Grid
             item
             xs={12}
+            key={props.project.title}
         >
-            <p>
                 <Typography variant="overline">
                     {props.project.title}
                 </Typography>
                 <Typography>
                     {props.project.description}
                 </Typography>
-            </p>
         </Grid>
     )
+}
+
+function ProjectsList (props) {
+    if (props.projects.length > 0) {
+        return (
+            <Grid item>
+                <Typography
+                    variant="h6"
+                >
+                    Notable Projects
+                </Typography>
+
+                {props.projects.map((project, idx) => ( <ProjectSection project={project} key={idx} />))}
+            </Grid>            
+        )
+    }
+
+    return null;
 }
 
 class ResumeCard extends React.Component {
@@ -117,20 +134,18 @@ class ResumeCard extends React.Component {
                     container
                     item
                 >
-                <Grid
-                    container
-                    item
-                >
-                    <p>
+                    <Grid
+                        container
+                        item
+                    >
                         <Typography>
                             {this.props.info.description}
                         </Typography>
-                    </p>
-                    <Typography variant="subtitle2">
-                        Notable Projects
-                    </Typography>
-                    {this.props.info.projects.map(project => ( <ProjectSection project={project} />)) }
-                </Grid>
+
+                        <ProjectsList
+                            projects={this.props.info.projects}
+                        />
+                    </Grid>
                 </Grid>
             )
         }
