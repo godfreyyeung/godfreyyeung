@@ -2,6 +2,7 @@ import React, { ReactDom, Component } from 'react';
 import Grid from '@material-ui/core/Grid';
 import Card from '@material-ui/core/Card';
 import Typography from '@material-ui/core/Typography';
+import LaunchIcon from '@material-ui/icons/Launch';
 
 const CardHeader = (props) => {
     return (
@@ -93,12 +94,32 @@ const ProjectSection = (props) => {
                 }
             }
         >
-                <Typography variant="overline">
-                    {props.project.title}
+                <Typography
+                    variant="overline"
+                >
+                    <a
+                        href="/"
+                        style={
+                            {
+                                color: "inherit",
+                                textDecoration: "none",
+                            }
+                        }
+                    >
+                        {props.project.title}&nbsp;
+                        <LaunchIcon
+                            style={
+                                {
+                                    fontSize: "16px",
+                                    marginBottom: "-2px",
+                                }
+                            }
+                            color="primary"
+                        />
+                    </a>
                 </Typography>
-                <Typography>
-                    {props.project.description}
-                </Typography>
+                <br />
+                {props.project.description}
         </Grid>
     )
 }
@@ -111,7 +132,7 @@ function ProjectsList (props) {
                     variant="h6"
                     style={
                         {
-                            padding: "10px 0 4px 0",
+                            padding: "16px 0 4px 0",
                         }
                     }
                 >
