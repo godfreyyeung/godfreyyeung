@@ -87,6 +87,11 @@ const ProjectSection = (props) => {
             item
             xs={12}
             key={props.project.title}
+            style={
+                {
+                    marginBottom: "24px",
+                }
+            }
         >
                 <Typography variant="overline">
                     {props.project.title}
@@ -104,6 +109,11 @@ function ProjectsList (props) {
             <Grid item>
                 <Typography
                     variant="h6"
+                    style={
+                        {
+                            padding: "10px 0 4px 0",
+                        }
+                    }
                 >
                     Notable Projects
                 </Typography>
