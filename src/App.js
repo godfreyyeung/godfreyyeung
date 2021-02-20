@@ -34,10 +34,19 @@ function App() {
       ),
       projects: [
         {
-          title: "Zoning Application Portal",
+          title: "Applicant Portal",
+          description: (
+            <div>
+              The "21st century" tool for submitting land use application to City Planning.
+            </div>
+          ),
+          photoUrl: "",
+        },
+        {
+          title: "Land Use Participation Portal",
           description: (<div>
                 A tool for New York's borough boards, borough presidents, and community boards to submit hearings
-                and recommendations.
+                and recommendations for land use applications as a part of the Uniform Land Use Review Procedure (ULURP).
              </div>),
           photoUrl: "",
         },
@@ -73,17 +82,31 @@ function App() {
       projects: [
         {
           title: "Economic Value Atlas",
-          description: "A project in collaboration with Brookings",
+          description: (
+            <div>
+              A tool for exploring economic, demographic and infrastructure indicator data through dynamic maps and D3 graphs.
+              Developed in collaboration with the Brookings Institute and Metro's Planning division.
+            </div>
+          ),
           photoUrl: ""
         },
         {
           title: "Regional Illegal Dumping",
-          description: "",
+          description: (
+            <div>
+              A mobile-friendly, flexbox application where Metro citizens can report illegally dumped garbage. A mapping and geocoding component helps users
+              report the illegal dumping location, or determine if it was already reported by someone else.
+            </div>
+          ),
           photoUrl: "",
         },
         {
           title: "Trail Counts",
-          description: "",
+          description: (
+            <div>
+              I led development for a pair of mobile-friendly tools, one for volunteers and one for administrators, for counting usage types (pedestrian, cyclists, scooter, etc) at trails around the region.
+            </div>
+          ),
           photoUrl: "",
         },
       ],
@@ -95,13 +118,9 @@ function App() {
       division: "IT",
       city: "Salem",
       state: "Oregon",
-      startDate: "Feb 2017",
-      endDate: "May 2019",
-      achievements: [
-        "",
-        "",
-        "",
-      ],
+      startDate: "July 2016",
+      endDate: "Feb 2017",
+      achievements: [],
       description: "",
       projects: [],
       logoUrl: "salem-logo.png",
@@ -114,14 +133,18 @@ function App() {
       state: "New York",
       startDate: "June 2015",
       endDate: "September 2015",
-      achievements: [
-        "",
-        "",
-        "",
-        "",
-      ],
+      achievements: [], 
       description: "",
-      projects: [],
+      projects: [
+        {
+          title: 'Real-time pedestrian visualization',
+          description: (
+            <div>
+              A real-time visualization of foot traffic from sensors around Union Square, Manhattan, and Dilworth Park, Philadelphia.
+            </div>
+          )
+        }
+      ],
       logoUrl: "placemeter-logo.png",
     },
   ]
