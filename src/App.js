@@ -35,6 +35,7 @@ function App() {
       projects: [
         {
           title: "Applicant Portal",
+          link: "https://applicants.planning.nyc.gov/",
           description: (
             <span>
               The "21st century" tool for submitting land use application to City Planning.
@@ -44,6 +45,7 @@ function App() {
         },
         {
           title: "Land Use Participation Portal",
+          link: "https://zap.planning.nyc.gov/",
           description: (
               <span>
                 A tool for New York's borough boards, borough presidents, and community boards to submit hearings
@@ -53,6 +55,7 @@ function App() {
         },
         {
           title: "City Environmental Quality Review",
+          link: "https://www.ceqr.app/",
           description: (
             <span>
               A tool for planners and consultants to review environmental impacts of proposed developments across the city.
@@ -83,6 +86,7 @@ function App() {
       projects: [
         {
           title: "Economic Value Atlas",
+          link: "http://evatool.oregonmetro.gov/",
           description: (
             <span>
               A tool for exploring economic, demographic and infrastructure indicator data through dynamic maps and D3 graphs.
@@ -93,6 +97,7 @@ function App() {
         },
         {
           title: "Regional Illegal Dumping",
+          link: "https://ridpatrol.oregonmetro.gov/report",
           description: (
             <span>
               A mobile-friendly, flexbox application where Metro citizens can report illegally dumped garbage. A mapping and geocoding component helps users

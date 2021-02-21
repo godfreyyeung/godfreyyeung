@@ -83,6 +83,45 @@ const CardHeader = (props) => {
 }
 
 const ProjectSection = (props) => {
+    let projectTitle;
+
+    if (props.project.link) {
+        projectTitle = (
+            <Typography
+                variant="overline"
+            >
+                <a
+                    href={props.project.link}
+                    style={
+                        {
+                            color: "inherit",
+                            textDecoration: "none",
+                        }
+                    }
+                >
+                    {props.project.title}&nbsp;
+                    <LaunchIcon
+                        style={
+                            {
+                                fontSize: "16px",
+                                marginBottom: "-2px",
+                            }
+                        }
+                        color="primary"
+                    />
+                </a>
+            </Typography>
+        )
+    } else {
+        projectTitle = (
+            <Typography
+                variant="overline"
+            >
+                {props.project.title}
+            </Typography>
+        )
+    }
+
     return (
         <Grid
             item
@@ -94,30 +133,7 @@ const ProjectSection = (props) => {
                 }
             }
         >
-                <Typography
-                    variant="overline"
-                >
-                    <a
-                        href="/"
-                        style={
-                            {
-                                color: "inherit",
-                                textDecoration: "none",
-                            }
-                        }
-                    >
-                        {props.project.title}&nbsp;
-                        <LaunchIcon
-                            style={
-                                {
-                                    fontSize: "16px",
-                                    marginBottom: "-2px",
-                                }
-                            }
-                            color="primary"
-                        />
-                    </a>
-                </Typography>
+                {projectTitle}
                 <br />
                 {props.project.description}
         </Grid>
