@@ -151,7 +151,12 @@ function App() {
       startDate: "July 2016",
       endDate: "Feb 2017",
       achievements: [],
-      description: "",
+      description: (
+        <span>
+          Part of the wonderful IT GIS team, I made heavy use of ArcGIS JS and ArcGIS WebAppBuilder to build spatial reference and analysis tools for the city website and planners.
+          Topics included environmental review, parking, road work, urban renewal areas, skateboarding, floodplains, utilities, and more.
+        </span>
+      ),
       projects: [],
       logoUrl: "salem-logo.png",
     },
