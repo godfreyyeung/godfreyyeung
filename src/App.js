@@ -38,9 +38,15 @@ function App() {
           link: "https://applicants.planning.nyc.gov/",
           description: (
             <span>
-              The "21st century" tool for submitting land use application to City Planning.
+              The modern, digital service for submitting land use application to City Planning.
             </span>
           ),
+          press: [
+            {
+              link: "https://therealdeal.com/2020/10/01/zoning-process-enters-21st-century-with-online-filing/",
+              title: (<span>The Real Deal - <i>Zoning process enters 21st century with online filing</i></span>)
+            },
+          ],
           photoUrl: "",
         },
         {
@@ -88,11 +94,29 @@ function App() {
           title: "Economic Value Atlas",
           link: "http://evatool.oregonmetro.gov/",
           description: (
-            <span>
+            <div>
               A tool for exploring economic, demographic and infrastructure indicator data through dynamic maps and D3 graphs.
               Developed in collaboration with the Brookings Institute and Metro's Planning division.
-            </span>
+            </div>
           ),
+          press: [
+            {
+              link: "https://www.brookings.edu/research/announcing-the-economic-value-atlas-a-new-approach-to-regional-transportation-and-land-use-planning/",
+              title: (<span>Brookings - <i>Announcing the Economic Value Atlas: A new approach to regional transportation and land use planning</i></span>)
+            },
+            {
+              link: "https://datasmart.ash.harvard.edu/news/article/map-monday-regional-tool-economic-development",
+              title: (<span>Harvard Kennedy School Ash Center - <i>Map Monday: A Regional Tool for Economic Development</i></span>)
+            },
+            {
+              link: "https://www.planetizen.com/news/2019/06/104696-economic-value-atlas-new-tool-assessing-economic-development",
+              title: (<span>Planetizen - <i>The 'Economic Value Atlas': A New Tool for Assessing Economic Development</i></span>)
+            },
+            {
+              link: "https://www.oregonmetro.gov/tools-partners/guides-and-tools/economic-value-atlas",
+              title: (<span>Metro's guide to the Economic Value Atlas</span>)
+            },
+          ],
           photoUrl: ""
         },
         {
@@ -148,7 +172,17 @@ function App() {
             <div>
               A real-time visualization of foot traffic from sensors around Union Square, Manhattan, and Dilworth Park, Philadelphia.
             </div>
-          )
+          ),
+          press: [
+            {
+              link: "https://www.bloomberg.com/news/articles/2016-02-09/this-real-time-map-tracks-pedestrians-and-bikes-in-new-york-s-union-square",
+              title: (<span>Bloomberg CityLab - <i>Watch New Yorkers Hurry Across Union Square in Real-Time</i></span>)
+            },
+            {
+              link: "https://dirt.asla.org/2015/09/16/placemeter-measures-the-flow-of-people-through-urban-spaces/",
+              title: (<span>ASLA's The Dirt - <i>Placemeter Measures the Flow of People Through Urban Spaces</i></span>)
+            },
+          ],
         }
       ],
       logoUrl: "placemeter-logo.png",

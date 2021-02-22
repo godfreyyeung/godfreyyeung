@@ -3,6 +3,9 @@ import Grid from '@material-ui/core/Grid';
 import Card from '@material-ui/core/Card';
 import Typography from '@material-ui/core/Typography';
 import LaunchIcon from '@material-ui/icons/Launch';
+import LinkIcon from '@material-ui/icons/Link';
+import List from '@material-ui/core/List';
+import ListItem from '@material-ui/core/ListItem';
 
 const CardHeader = (props) => {
     return (
@@ -12,6 +15,7 @@ const CardHeader = (props) => {
             style={
                 {
                     cursor: 'pointer',
+                    padding: '15px 15px 5px 15px',
                 }
             }
         >
@@ -84,6 +88,7 @@ const CardHeader = (props) => {
 
 const ProjectSection = (props) => {
     let projectTitle;
+    let pressList;
 
     if (props.project.link) {
         projectTitle = (
@@ -94,7 +99,7 @@ const ProjectSection = (props) => {
                     href={props.project.link}
                     style={
                         {
-                            color: "inherit",
+                            color: "rgba(0, 0, 0, 0.87)",
                             textDecoration: "none",
                         }
                     }
@@ -122,6 +127,50 @@ const ProjectSection = (props) => {
         )
     }
 
+    if (props.project.press && props.project.press.length > 0) {
+        pressList = (
+            <List
+                dense={true}
+                style={
+                    {
+                        marginLeft: "24px",
+                    }
+            }>
+                <Typography variant="subtitle2">
+                    Read more:
+                </Typography>
+
+                {props.project.press.map((pressItem, idx) => (
+                    <ListItem
+                        key={idx}
+                        style={
+                            {
+                                paddingTop: "0",
+                                paddingBottom: "0",
+                            }
+                        }
+                    >
+                        <a
+                            href={pressItem.link}
+                        >
+                            <LinkIcon
+                            color="primary"
+                            style={
+                                {
+                                verticalAlign: "middle",
+                                fontSize: "22px",
+                                marginTop: "-3px",
+                                }
+                            }
+                            />
+                            &nbsp; {pressItem.title}
+                        </a>
+                    </ListItem>
+                ))}
+            </List>
+        );
+    }
+
     return (
         <Grid
             item
@@ -129,13 +178,17 @@ const ProjectSection = (props) => {
             key={props.project.title}
             style={
                 {
-                    marginBottom: "24px",
+                    marginTop: "12px",
                 }
             }
         >
                 {projectTitle}
+
                 <br />
+
                 {props.project.description}
+
+                {pressList}
         </Grid>
     )
 }
@@ -180,6 +233,12 @@ class ResumeCard extends React.Component {
                 <Grid
                     container
                     item
+                    style={
+                        {
+                            boxShadow: 'inset 0 7px 9px -7px rgba(0,0,0,0.4)',
+                            padding: '15px',
+                        }
+                    }
                 >
                     <Grid
                         container
@@ -214,7 +273,6 @@ class ResumeCard extends React.Component {
                 <Card
                     style={
                         {
-                            padding: '15px',
                             minHeight: '50px',
                             borderRadius: '0',
                             margin: '0 0 5px 0',
