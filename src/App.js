@@ -43,6 +43,14 @@ function App() {
           ),
           press: [
             {
+              link: "https://www1.nyc.gov/site/planning/about/press-releases/pr-20200929.page",
+              title: (<span>NYC Planning Press Release - <i>A First: Some Land Use Documents Can Now Be Filed Digitally</i></span>)
+            },
+            {
+              link: "https://www.citylandnyc.org/dcp-launches-updated-digital-land-use-portal-online-application-tracker/",
+              title: (<span>CityLand - <i>DCP Launches Updated Digital Land Use Portal, Online Application Tracker</i></span>)
+            },
+            {
               link: "https://therealdeal.com/2020/10/01/zoning-process-enters-21st-century-with-online-filing/",
               title: (<span>The Real Deal - <i>Zoning process enters 21st century with online filing</i></span>)
             },
@@ -54,9 +62,15 @@ function App() {
           link: "https://zap.planning.nyc.gov/",
           description: (
               <span>
-                A tool for New York's borough boards, borough presidents, and community boards to submit hearings
+                A tool for the public to search land use applications, and for New York's borough boards, borough presidents, and community boards to submit hearings
                 and recommendations for land use applications as a part of the Uniform Land Use Review Procedure (ULURP).
              </span>),
+             press: [
+              {
+                link: "https://www1.nyc.gov/site/planning/about/press-releases/pr-20210114.page",
+                title: (<span>NYC Planning Press Release- <i>ZAP: DCP Launches New and Improved Digital Land Use Portal</i></span>)
+              },
+            ],
           photoUrl: "",
         },
         {

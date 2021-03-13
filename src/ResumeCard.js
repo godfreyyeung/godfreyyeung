@@ -97,6 +97,8 @@ const ProjectSection = (props) => {
             >
                 <a
                     href={props.project.link}
+                    target="_blank"
+                    rel="noopener noreferrer"
                     style={
                         {
                             color: "rgba(0, 0, 0, 0.87)",
@@ -152,6 +154,8 @@ const ProjectSection = (props) => {
                     >
                         <a
                             href={pressItem.link}
+                            target="_blank"
+                            rel="noopener noreferrer"
                         >
                             <LinkIcon
                             color="primary"
